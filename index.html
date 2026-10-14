@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="tg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100e">
+  <meta name="description" content="ZIYO SHOP — мағозаи онлайнӣ барои либосҳои занонаи зебо ва замонавӣ.">
+  <title>ZIYO SHOP — Luxury Women's Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div class="announcement">КОЛЛЕКСИЯИ НАВ · УСЛУБИ ХУДРО ПАЙДО КУНЕД</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="ZIYO SHOP — саҳифаи асосӣ">ZIYO<span>.</span></a>
+    <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Кушодани меню" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Асосӣ</a><a href="#collections">Коллексия</a><a href="#shop">Маҳсулот</a><a href="#about">Дар бораи мо</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="focusSearch" aria-label="Ҷустуҷӯ">⌕</button>
+      <button class="icon-button" id="showFavorites" aria-label="Маҳсулоти дӯстдошта">♡</button>
+      <button class="icon-button cart-trigger" id="openCart" aria-label="Сабади харид">♧<span id="cartCount" class="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">ZIYO WOMEN'S COLLECTION</p>
+        <h1>Зебоӣ дар<br><em>содагӣ</em> аст.</h1>
+        <p class="hero-description">Либосҳои зебо барои зане, ки услуби худро медонад. Коллексияро кашф кунед ва намуди махсуси худро созед.</p>
+        <a class="button button-gold" href="#shop">КОЛЛЕКСИЯРО БИНЕД <span>↗</span></a>
+      </div>
+      <div class="hero-caption">STYLE · ELEGANCE · CONFIDENCE</div>
+    </section>
+
+    <section class="section collections-section" id="collections">
+      <div class="section-heading">
+        <p class="eyebrow">ИНТИХОБИ ШУМО</p>
+        <h2>Коллексияҳо</h2>
+        <p>Барои ҳар лаҳза услуби мувофиқ.</p>
+      </div>
+      <div class="collection-grid">
+        <button class="collection-card" data-collection="Либос">
+          <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=900&q=85" alt="Коллексияи либосҳои занона" loading="lazy">
+          <span class="collection-overlay"><strong>Либосҳо</strong><small>ТАМОШО КАРДАН ↗</small></span>
+        </button>
+        <button class="collection-card" data-collection="Костюм">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=85" alt="Услуби шаҳрӣ ва костюмҳо" loading="lazy">
+          <span class="collection-overlay"><strong>Услуби шаҳрӣ</strong><small>ТАМОШО КАРДАН ↗</small></span>
+        </button>
+        <button class="collection-card" data-collection="Аксессуар">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85" alt="Аксессуарҳои занона" loading="lazy">
+          <span class="collection-overlay"><strong>Аксессуарҳо</strong><small>ТАМОШО КАРДАН ↗</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section shop-inner">
+        <div class="section-heading">
+          <p class="eyebrow">ZIYO SELECTION</p>
+          <h2>Интихоби махсус</h2>
+          <p>Порчаҳои зебо барои гардероби шумо.</p>
+        </div>
+        <div class="shop-toolbar">
+          <div class="filter-list" id="filterList" aria-label="Категорияҳо">
+            <button class="filter-chip is-active" data-category="Ҳама">Ҳама</button>
+            <button class="filter-chip" data-category="Либос">Либосҳо</button>
+            <button class="filter-chip" data-category="Костюм">Костюмҳо</button>
+            <button class="filter-chip" data-category="Блузка">Блузка</button>
+            <button class="filter-chip" data-category="Аксессуар">Аксессуар</button>
+          </div>
+          <div class="search-sort">
+            <label class="search-field"><span>⌕</span><input id="searchInput" type="search" placeholder="Ҷустуҷӯи маҳсулот..." aria-label="Ҷустуҷӯи маҳсулот"></label>
+            <select id="sortSelect" aria-label="Тартиби маҳсулот">
+              <option value="featured">Интихоби махсус</option>
+              <option value="price-asc">Арзон → қимат</option>
+              <option value="price-desc">Қимат → арзон</option>
+              <option value="name">Аз рӯйи ном</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-image-wrap">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85" alt="Мӯд ва услуби занона" loading="lazy">
+        <span class="about-stamp">ZIYO<br>EST. 2026</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">ҚИССАИ МО</p>
+        <h2>Услуби ту.<br><em>Қоидаи ту.</em></h2>
+        <p>ZIYO SHOP барои заноне сохта шудааст, ки зебоӣ, роҳатӣ ва услуби шахсии худро қадр мекунанд. Мо бовар дорем, ки либоси мувофиқ на танҳо намуди зоҳирӣ, балки эҳсоси боварӣ ба худ низ мебахшад.</p>
+        <a class="text-link" href="#shop">МАҲСУЛОТРО БИНЕД <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="benefits section">
+      <div class="benefit"><span class="benefit-number">01</span><strong>Интихоби бодиққат</strong><p>Маҳсулот барои услуби ҳаррӯза ва махсус.</p></div>
+      <div class="benefit"><span class="benefit-number">02</span><strong>Фармоиши осон</strong><p>Фармоишро мустақиман тавассути WhatsApp фиристед.</p></div>
+      <div class="benefit"><span class="benefit-number">03</span><strong>Муоширати мустақим</strong><p>Андоза ва расониданро бо фурӯшанда мувофиқа кунед.</p></div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">ZIYO COMMUNITY</p>
+      <h2>Зебоиро аз даст надиҳед.</h2>
+      <p>Барои пурсидани коллексияҳои нав ба мо дар WhatsApp нависед.</p>
+      <a class="button button-dark" id="newsletterWhatsApp" href="#" target="_blank" rel="noopener">БО МО ПАЙВАСТ ШАВЕД ↗</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-block"><a class="brand brand-light" href="#">ZIYO<span>.</span></a><p>Зебоӣ дар содагӣ аст.<br>Услубе, ки аз они шумост.</p></div>
+      <div><h3>МЕНЮ</h3><a href="#shop">Маҳсулот</a><a href="#collections">Коллексияҳо</a><a href="#about">Дар бораи мо</a></div>
+      <div><h3>ТАМОС</h3><a id="footerWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp ↗</a><span>Душанбе, Тоҷикистон</span><span>Фармоишҳои онлайн</span></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="currentYear"></span> ZIYO SHOP. Ҳамаи ҳуқуқҳо ҳифз шудаанд.</span><span>MADE WITH STYLE ✦</span></div>
+  </footer>
+
+  <div class="backdrop" id="backdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Сабади харид" aria-hidden="true">
+    <div class="drawer-heading"><div><p class="eyebrow">ZIYO SHOP</p><h2>Сабади шумо</h2></div><button class="close-button" id="closeCart" aria-label="Пӯшидан">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer"><div class="cart-total"><span>Ҳамагӣ</span><strong id="cartTotal">0 сомонӣ</strong></div><button class="button button-gold button-wide" id="checkoutButton">ФАРМОИШ ДОДАН ↗</button><p class="cart-note">Нарх ва расонидан пеш аз тасдиқи фармоиш мувофиқа мешаванд.</p></div>
+  </aside>
+
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+    <div class="modal-card">
+      <button class="close-button modal-close" data-close-modal="productModal" aria-label="Пӯшидан">×</button>
+      <p class="eyebrow">ZIYO SELECTION</p><h2 id="modalProductName">Маҳсулот</h2><p class="modal-price" id="modalProductPrice"></p>
+      <label class="form-label">Андоза</label><div class="size-options" id="sizeOptions"></div>
+      <label class="form-label" for="colorSelect">Ранг</label><select id="colorSelect" class="form-control"><option>Сиёҳ</option><option>Сафед</option><option>Беж</option><option>Қаҳваранг</option><option>Гулобӣ</option></select>
+      <button class="button button-gold button-wide modal-add" id="addToCartButton">БА САБАД ИЛОВА КУН</button>
+    </div>
+  </div>
+
+  <div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal-card checkout-card">
+      <button class="close-button modal-close" data-close-modal="checkoutModal" aria-label="Пӯшидан">×</button>
+      <p class="eyebrow">ҚАДАМИ ОХИР</p><h2 id="checkoutTitle">Маълумоти фармоиш</h2>
+      <form id="checkoutForm">
+        <label class="form-label" for="customerName">Ному насаб</label><input class="form-control" id="customerName" name="name" required autocomplete="name" placeholder="Номи шумо">
+        <label class="form-label" for="customerPhone">Рақами телефон</label><input class="form-control" id="customerPhone" name="phone" type="tel" required autocomplete="tel" placeholder="+992 ...">
+        <label class="form-label" for="customerAddress">Суроғаи расонидан</label><input class="form-control" id="customerAddress" name="address" required autocomplete="street-address" placeholder="Шаҳр, кӯча ё маҳалла">
+        <label class="form-label" for="customerNote">Шарҳи иловагӣ (ихтиёрӣ)</label><textarea class="form-control" id="customerNote" name="note" rows="3" placeholder="Вақти расонидан ё хоҳиши дигар"></textarea>
+        <p class="checkout-disclaimer">Пас аз пахш кардан WhatsApp кушода мешавад ва матни фармоиш омода мегардад. Фиристоданро худатон тасдиқ мекунед.</p>
+        <button class="button button-gold button-wide" type="submit">ФИРИСТОДАН БА WHATSAPP ↗</button>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
